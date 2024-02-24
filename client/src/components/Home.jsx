@@ -10,14 +10,14 @@ const Home = () => {
 
   const fetchData = () => {
     axios
-      .get("http://localhost:3000/user/getData")
+      .get("mern-authentication-app-chi.vercel.app/user/getData")
       .then((result) => setData(result.data.data))
       .catch((error) => console.error("Error fetching data: ", error));
   };
 
   const getData =async () => {
     await axios
-      .post("http://localhost:3000/authentication/getInfo",
+      .post("mern-authentication-app-chi.vercel.app/authentication/getInfo",
       {},
       {
         headers:{
@@ -36,7 +36,7 @@ const Home = () => {
 
   const handleDelete = (id) => {
     axios
-      .delete("http://localhost:3000/user/deleteUser/" + id)
+      .delete("mern-authentication-app-chi.vercel.app/user/deleteUser/" + id)
       .then((res) => {
         if (res.data.success === true) {
           toast.success(res.data.message);
