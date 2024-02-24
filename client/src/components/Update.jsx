@@ -12,7 +12,7 @@ const Update = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/user/getSingle/" + id)
+      .get("https://mern-authentication-app-chi.vercel.app/user/getSingle/" + id)
       .then((result) => {
         console.log(result.data.singleUser)
         setName(result.data.singleUser.name);
@@ -25,7 +25,7 @@ const Update = () => {
   const handleUpdate = (e) => {
     e.preventDefault();
     axios
-      .put("http://localhost:3000/user/update/" + id, { name, email,age })
+      .put("https://mern-authentication-app-chi.vercel.app/user/update/" + id, { name, email,age })
       .then((res) => {
         toast.success(res.data.message);
         navigate("/");
