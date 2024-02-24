@@ -10,7 +10,7 @@ const app = express()
 
 app.use(express.json())
 app.use(cors({
-    origin:'https://crud-operations-livid.vercel.app'
+    origin:'https://mern-operations.vercel.app'
 }))
 app.use("/authentication", authRouter)
 app.use('/user',userRouter)
