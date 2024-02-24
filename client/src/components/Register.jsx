@@ -17,7 +17,7 @@ const Register = () => {
       return;
     }
 
-    axios.post('http://localhost:3000/authentication/signup', { name, email, password })
+    axios.post('mern-authentication-app-chi.vercel.app/authentication/signup', { name, email, password })
       .then(() => {
         toast.success('User created successfully');
         navigate('/login');
