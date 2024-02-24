@@ -17,7 +17,7 @@ const Createuser = () => {
       return;
     }
 
-    axios.post('https://mern-authentication-app-chi.vercel.app/user/createuser', { name, email, age })
+    axios.post('https://mern-server-weld.vercel.app/user/createuser', { name, email, age })
       .then(() => {
         toast.success('User created successfully');
         navigate('/');
